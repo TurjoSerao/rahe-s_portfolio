@@ -1,14 +1,186 @@
-html,
-body {
+/* ===== Carousel ===== */
+
+.carousel-item img {
+    height: 70vh;
+    object-fit: cover;
+}
+
+/* Dark overlay for better text visibility */
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Caption animation */
+.carousel-caption {
+    bottom: 30%;
+    z-index: 2;
+    animation: slideUp 1s ease;
+    background-color: #f0f0f042;
+    color: black;
+    border-radius: 10px;
+    padding: 60px 0;
+}
+
+.carousel-caption h5 {
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    font-size: 18px;
+    width: 70%;
+    margin: auto;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ===== About Section ===== */
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 100px 10%;
+}
+
+.about-left {
+    flex: 1;
+}
+
+.about-left h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.about-left p {
+    color: #555;
+    line-height: 1.8;
+}
+
+.about-right {
+    flex: 1;
+}
+
+.about-right img {
+    width: 100%;
+    /* height: 600px; */
+    border-radius: 20px;
+}
+
+/* ===== Career Section ===== */
+
+.career {
+    background: #f8f9fa;
+}
+
+.mission-card {
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.mission-card:hover {
+    transform: translateY(-10px);
+}
+
+.icon-box {
+    width: 90px;
+    height: 90px;
+    background: #212529;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-box i {
+    font-size: 35px;
+}
+
+/* ===== Services ===== */
+
+.services {
+    background: #f8f9fa;
+}
+
+.service-card {
+    border: 2px solid #212529;
+    border-radius: 20px;
+    transition: 0.4s;
     height: 100%;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+.service-card:hover {
+    background: #212529;
+    color: white;
+    transform: translateY(-10px);
 }
 
-footer {
-    margin-top: auto;
+.service-icon {
+    font-size: 45px;
+}
+
+/* ===== Feedback ===== */
+
+.feedback-card {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    transition: 0.4s;
+    height: 100%;
+}
+
+.feedback-card:hover {
+    transform: translateY(-10px);
+}
+
+.client-img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 768px) {
+
+    .carousel-item img {
+        height: 60vh;
+    }
+
+    .carousel-caption {
+        bottom: 20%;
+    }
+
+    .carousel-caption h5 {
+        font-size: 28px;
+    }
+
+    .carousel-caption p {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
 }
