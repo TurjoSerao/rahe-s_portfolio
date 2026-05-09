@@ -1,3 +1,18 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    margin-top: auto;
+}
+
 /* ===== Carousel ===== */
 
 .carousel-item img {
@@ -156,6 +171,43 @@
     height: 90px;
     object-fit: cover;
     border-radius: 50%;
+}
+
+/* About Page */
+.about-title {
+    background: url(/images/slider_1.jpg);
+    background-repeat: no-repeat;
+    height: 300px;
+    opacity: 0.5 black;
+    color: White;
+    text-align: center;
+}
+
+.about-title h1{
+    font-size: 40px;
+    padding-top: 50px;
+}
+
+/* Skill Section */
+.skills {
+    background: #f8f9fa;
+}
+
+.skill-card {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.skill-card:hover {
+    background: #212529;
+    color: white;
+    transform: translateY(-10px);
+}
+
+.skill-icon {
+    font-size: 50px;
 }
 
 /* ===== Responsive ===== */
